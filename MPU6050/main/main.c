@@ -173,7 +173,6 @@ void app_main(void)
             acc_roll = atan2f(-converted.accel_x_g, converted.accel_z_g) * 180.0f / M_PI;
 
             // --- Gyroscope integration (with bias removed) ---
-            // Corrected: Gyro Y for Pitch, Gyro X for Roll
             gyro_pitch_rate = converted.gyro_y_dps - gyro_y_bias;
             gyro_roll_rate = converted.gyro_x_dps - gyro_x_bias;
 
